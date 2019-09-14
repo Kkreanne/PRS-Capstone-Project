@@ -65,3 +65,7 @@ insert User (UserName, Password, FirstName, LastName, PhoneNumber, Email, IsRevi
 insert User (UserName, Password, FirstName, LastName, PhoneNumber, Email, IsReviewer, IsAdmin)
 	Values ('tomsterj', 'Boston3', 'Tommy', 'Johnson', '513-714-1772', 'tomsterj1@yahoo.com', '1', '0');
     
+insert Vendor (Code, Name, Address, City, State, Zip, PhoneNumber, Email)
+	Values ('1234', 'Dunham Supplies', '249 Main St', 'Cincinnati', 'OH', '45248', '513-123-4567', 'dunhamsupplies@yahoo.com');
+insert Vendor (Code, Name, Address, City, State, Zip, PhoneNumber, Email)
+	Values ('2345', 'Bolder Stream', '45 Glenway Ave', 'Cincinnati', 'OH', '45238', '513-890-1234', 'BolderStreamVending@fuse.net');
