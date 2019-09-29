@@ -107,7 +107,11 @@ public void setPreApproved(boolean preApproved) {
 }
 
 public String toString() {
-	String message = "";
+	String message = name + " is a pre-approved Vendor.\n"
+					+ "Located at: " + address + "\n"
+					+ city + ", " + state + " " + zip + "\n"
+					+ "Contact Information: " + phoneNumber + "\n"
+					+ email;
 	return message;
 }
 

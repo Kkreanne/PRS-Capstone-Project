@@ -97,7 +97,11 @@ public void setAdmin(boolean admin) {
 }
 
 public String toString() {
-	String message = "";
+	String message = userName + " has forgotten their password. \n"
+					+ "User Information: " + firstName + " " + lastName + "\n"
+					+ email + "\n"
+					+ phoneNumber + "\n"
+					+ "Your password is: " + password + ".\n";
 	return message;
 }
 
