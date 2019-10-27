@@ -56,7 +56,7 @@ public class PRSConsoleApp {
 					case 3:
 						// add
 						try {
-							udb.add();
+							//udb.add();
 							udb.addUser();
 						} catch (SQLException e) {
 							e.printStackTrace();

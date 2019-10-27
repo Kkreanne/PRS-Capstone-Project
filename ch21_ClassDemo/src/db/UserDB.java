@@ -20,8 +20,8 @@ public class UserDB {
 
 	public List<User> list() throws SQLException {
 		Statement stmt = getConnection().createStatement();
-		List<User> users = new ArrayList<>();
 		String sql = "SELECT * FROM User";
+		List<User> users = new ArrayList<>();
 		ResultSet rs = stmt.executeQuery(sql);
 
 		while (rs.next()) {
@@ -36,8 +36,7 @@ public class UserDB {
 			boolean reviewer = rs.getBoolean("isReviewer");
 			boolean admin = rs.getBoolean("isAdmin");
 			User u = new User(id, userName, password, firstName, lastName, phoneNumber, email, reviewer, admin); // create
-																													// an
-																													// instance
+																														// instance
 																													// of
 																													// users
 			users.add(u); // add users to table
@@ -48,8 +47,8 @@ public class UserDB {
 
 	public User get(int id) throws SQLException {
 		Statement stmt = getConnection().createStatement();
-		User user = null;
 		String sql = "SELECT * FROM User " + "WHERE ID = " + id;
+		User user = null;
 		ResultSet rs = stmt.executeQuery(sql);
 
 		if (rs.next()) {
@@ -63,9 +62,7 @@ public class UserDB {
 			boolean reviewer = rs.getBoolean("isReviewer");
 			boolean admin = rs.getBoolean("isAdmin");
 			user = new User(id, userName, password, firstName, lastName, phoneNumber, email, reviewer, admin); // users
-		} else {
-			System.out.println("There is no user with that ID, please try again.");
-		}
+		} 
 		rs.close();
 		return user;
 	}
@@ -94,10 +91,6 @@ public class UserDB {
 				System.out.println("That is already an ID. Please try again.");
 			}
 		}
-	}
-
-	public void add() {
-
 	}
 
 	public int updateUser(User u) {
